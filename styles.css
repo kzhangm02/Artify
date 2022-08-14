@@ -1,0 +1,228 @@
+:root {
+	--font: Trebuchet MS;
+	--body-color: #E8DCC8;
+	--body-text-color: #00303F;
+	--header-color: #54BAB9;
+	--header-text-color: #FBF8F1;
+	--img-border-color: #FBF8F1;
+	--style-hover-color: #FFC000;
+	--style-select-color: #00303F;
+	--slider-color: #FBF8F1;
+	--style-dim: 100px;
+}
+
+body {
+    margin:0;
+	 background: var(--body-color);
+}
+
+h2 {
+	font-family: var(--font);
+	text-align: center;
+	color: var(--body-text-color);
+}
+
+h3 {
+	font-family: var(--font);
+	text-align: center;
+	color: var(--body-text-color);
+}
+
+span {
+	font-family: var(--font);
+	color: var(--body-text-color);
+}
+
+button {
+	font-family: var(--font);
+}
+
+.myheader {
+	position: relative;
+	background: var(--header-color);
+	color: var(--header-text-color);
+	font-size: 20px;
+	font-family: cursive;
+	text-align: center;
+	line-height: 80px;
+}
+
+.intro-actions {
+	position: absolute;
+	margin-left: 110px;
+	width: 235px;
+}
+
+.disabled-btn {
+	opacity: 0.5;
+}
+
+.enabled-btn {
+	height: 50px;
+	width: 100%;
+	color: var(--body-text-color);
+	background: var(--header-color);
+	border-color: var(--header-color);
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.enabled-btn:hover{
+	cursor: pointer;
+}
+
+.disabled-btn {
+	height: 50px;
+	width: 100%;
+	color: var(--body-text-color);
+	background: var(--header-color);
+	border-color: var(--header-color);
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	opacity: 0.5
+}
+
+.content-container-background {
+	position: absolute;
+	z-index: -2;
+	left: -2px;
+	top: -2px;
+	width: 364px;
+	height: 364px;
+	background: var(--img-border-color);
+}
+
+.content-container {
+	position: relative;
+	left: 0; 
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 36px;
+	width: 360px;
+	height: 360px;
+	border: 5px solid var(--img-border-color);
+	margin-bottom: 12px;
+}
+
+.crop-content-container {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.stylized-canvas {
+	position: absolute;
+	z-index: -1;
+	width: 360px;
+	height: 360px;
+	background-color: var(--img-border-color);
+}
+
+.status {
+	position: relative;
+	top: 340px;
+}
+
+.style-selection {
+	position: absolute;
+	margin-left: 880px;
+	text-align: center;
+}	
+
+.style-container {
+	display: grid;
+	grid-template-columns: repeat(3, 101px);
+	gap: 15px;
+}
+
+.style-img {
+	height: var(--style-dim);
+}
+
+.crop-style-container {
+	width: calc(var(--style-dim) + 1px);
+	height: calc(var(--style-dim) + 1px);
+	overflow: hidden;
+	background-color: var(--img-border-color);
+	border: 3px solid var(--img-border-color);
+	border-bottom: 2px solid var(--img-border-color);
+	opacity: 0.8;
+}
+
+.crop-style-container:hover {
+	background-color: var(--style-hover-color);
+	border: 3px solid var(--style-hover-color);
+	border-bottom: 2px solid var(--style-hover-color);
+	opacity: 1;
+	cursor: pointer;
+}
+
+.crop-style-container-selected {
+	width: calc(var(--style-dim) + 1px);
+	height: calc(var(--style-dim) + 1px);
+	overflow: hidden;
+	background-color: var(--style-select-color);
+	border: 3px solid var(--style-select-color);
+	border-bottom: 2px solid var(--style-select-color);
+	opacity: 1;
+}
+
+.crop-selected-style-container {
+	display: none;
+	width: 256px;
+	height: 256px;
+}
+
+#slider-bar {
+	position: absolute;
+	-webkit-appearance: none;
+	appearance: none;
+	left: -2px;
+	width: 364px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	outline: none;
+	margin: 0;
+}
+
+#slider-bar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 4px;
+	height: 100%;
+	background: var(--slider-color);
+	cursor: pointer;
+}
+
+#slider-dot {
+	position: absolute;
+	-webkit-appearance: none;
+	appearance: none;
+	left: -10px;
+	width: 380px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	outline: none;
+	margin: 0;
+}
+
+#slider-dot::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	left: 4px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: var(--slider-color);
+	background-image: url('slider/sliderdot.png');
+	background-size: 14px 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
