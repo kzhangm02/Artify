@@ -117,12 +117,8 @@
 					var reader = new FileReader();
 					reader.onload = function(e) {
 						contentImg.setAttribute('src', e.target.result);
-						text.innerHTML = e.width;
 					}
 					reader.readAsDataURL(input.files[0]);
-					// var fileAsDataURL = window.URL.createObjectURL(input.files[0]);
-					// var v = getHeightAndWidthFromDataUrl(fileAsDataURL);
-					// text.innerHTML = v;
 				}
 			}
 			
